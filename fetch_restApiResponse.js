@@ -38,17 +38,17 @@ apex.message.confirm("çHéñämíËèàóùÇçsÇ¢Ç‹Ç∑Ç©ÅH", function( okPressed ) {
                 };
                 outMsg += odrNumber;
 			    //console.log(outMsg);
-                apex.message.confirm(outMsg);
+                apex.message.alert(outMsg);
 			}else{
 			    let errCode = xmlDoc.querySelector("errorCode").textContent;
 				outMsg += ":" + errCode;
 				//console.log(outMsg);
-                apex.message.confirm(outMsg);
+                apex.message.alert(outMsg);
 			};
            
         }).catch(function(e) {
 	        //console.log("PurchaseOrderRS Is Error");
-		    apex.message.confirm("PurchaseOrderRS Is Error");
+		    apex.message.alert("PurchaseOrderRS Is Error");
         });
 
 
