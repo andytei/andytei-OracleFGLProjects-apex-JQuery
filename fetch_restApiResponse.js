@@ -1,4 +1,4 @@
-apex.message.confirm("H–Šm’èˆ—‚ğs‚¢‚Ü‚·‚©H", function( okPressed ) {
+apex.message.confirm("å·¥äº‹ç¢ºå®šå‡¦ç†ã‚’è¡Œã„ã¾ã™ã‹ï¼Ÿ", function( okPressed ) {
     apex.jQuery("#t_Alert_Notification").remove();
     if( okPressed ) {
        
@@ -44,6 +44,12 @@ apex.message.confirm("H–Šm’èˆ—‚ğs‚¢‚Ü‚·‚©H", function( okPressed ) {
 				outMsg += ":" + errCode;
 				//console.log(outMsg);
                 apex.message.alert(outMsg);
+		// alert ã®OKãƒœã‚¿ãƒ³æŠ¼ä¸‹ã‚’å¾…ã¤		
+                apex.jQuery(document.activeElement).bind('click', function () {
+                    apex.submit('btn_kakutei');
+                    return true;
+                });
+				
 			};
            
         }).catch(function(e) {
